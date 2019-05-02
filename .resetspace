@@ -1,0 +1,3 @@
+# Reset all keybindings
+setxkbmap us
+pkill xcape
