@@ -39,7 +39,7 @@ freq() {
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='mplayer -loop 0 ~/tones/alert_tone.mp3 &> /dev/null'
+alias alert='mplayer -loop 0 ~/Tones/alert_tone.mp3 &> /dev/null'
 
 # Dictionary definitions: usage "def <myword>"
 alias def='sdcv'

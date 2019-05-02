@@ -1,0 +1,30 @@
+[global_config]
+[keybindings]
+  close_term = <Primary>w
+  move_tab_left = <Primary><Shift>Page_Up
+  move_tab_right = <Primary><Shift>Page_Down
+  new_tab = <Primary>t
+  next_tab = <Primary>Tab
+  page_down = <Primary>v
+  page_up = <Alt>v
+  prev_tab = <Primary><Shift>Tab
+  zoom_in = F5
+  zoom_out = F6
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.87
+    background_type = transparent
+    cursor_color = "#ffffff"
+    foreground_color = "#ffffff"
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    scrollbar_position = hidden
+    show_titlebar = False
