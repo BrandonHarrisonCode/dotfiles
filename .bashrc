@@ -70,6 +70,9 @@ esac
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+if [ -f ~/.bash_environment ]; then
+    . ~/.bash_environment
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -100,6 +103,7 @@ fi
 
 PATH="${PATH}:/Library/TeX/texbin"
 PATH="${PATH}:/usr/local/bin"
+PATH="${PATH}:~/.local/bin"
 
 fortune -o
 echo ""
