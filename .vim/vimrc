@@ -1,0 +1,29 @@
+colorscheme badwolf		" Colorful color scheme
+syntax enable			" Enable syntax highlighting
+
+set shiftwidth=4        " Make default indent level 4 spaces
+set tabstop=4			" Make each tab worth 4 spaces while reading
+set softtabstop=4		" Make each tab worth 4 spaces while writing
+set expandtab			" Translate tabs into spaces
+
+set number		    	" Turn on line numbers
+set showcmd			    " Show the last command in the bottom bar
+set wildmenu			" Visual autocomplete
+
+" Change indentation based on the filetype
+filetype plugin indent on		
+
+set lazyredraw			" Only redraw the screen when something changes
+set showmatch			" Highlight opposing matching character {like braces}
+
+set incsearch			" Search as characters are typed
+set hlsearch			" Highlight search results
+
+" Turn off search highlight with \<space>
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Move vertically by visual line, not real line
+nnoremap j gj
+nnoremap k gk
+
+inoremap jk <esc> 		" Remap jk to return to normal mode
