@@ -162,8 +162,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+p exec /usr/bin/sudo -u brandon /usr/bin/bash /home/brandon/.space2ctrl.sh
-bindsym $mod+Shift+p exec /usr/bin/sudo -u brandon /usr/bin/bash /home/brandon/.resetspace
+bindsym $mod+m exec /usr/bin/sudo -u brandon /usr/bin/bash /home/brandon/.space2ctrl.sh
+bindsym $mod+Shift+m exec /usr/bin/sudo -u brandon /usr/bin/bash /home/brandon/.resetspace
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
