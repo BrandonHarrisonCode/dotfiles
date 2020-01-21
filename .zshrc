@@ -36,7 +36,12 @@ export EDITOR=vim
 
 ZSH_THEME="agnoster"
 
-export ZSH=/usr/share/oh-my-zsh
+if [[ -d /usr/share/oh-my-zsh ]]; then
+  export ZSH=/usr/share/oh-my-zsh
+elif [[ -d ~/.oh-my-zsh ]]; then
+  export ZSH=~/.oh-my-zsh
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 export BROWSER=qutebrowser
