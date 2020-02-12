@@ -1,0 +1,7 @@
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+
+Tarrasch/zsh-bd # Quickly go back to specific ancestor directory
+arzzen/calc.plugin.zsh # Easy calculator on the commandline with 'calc'
+SukkaW/zsh-proxy # Easy configuration of proxies

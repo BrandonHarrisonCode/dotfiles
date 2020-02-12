@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 colorscheme badwolf		" Colorful color scheme
 syntax enable			" Enable syntax highlighting
 
@@ -7,6 +8,94 @@ set softtabstop=4		" Make each tab worth 4 spaces while writing
 set expandtab			" Translate tabs into spaces
 
 set number		    	" Turn on line numbers
+=======
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" Muted colorscheme
+Plug 'jacoborus/tender.vim' 
+" Powerline status bar
+Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim/' }
+" Syntax highlighting for Javascript
+Plug 'pangloss/vim-javascript'
+" Syntax highlighting for React
+Plug 'MaxMEllon/vim-jsx-pretty'
+" Syntax highlighting for Docker
+Plug 'ekalinin/Dockerfile.vim'
+" Syntax highlighting for Terraform
+Plug 'hashivim/vim-terraform'
+" Large selection of colorschemse
+Plug 'flazz/vim-colorschemes'
+
+" Initialize plugin system
+call plug#end()
+
+" Color scheme
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+
+" Don't try to be vi compatible
+set nocompatible
+
+" Helps force plugins to load correctly when it is turned back on below
+filetype off
+
+" Allows recursive search
+set path+=**
+
+" Allows seeing all search results at once
+set wildmenu
+
+" Automatically set current directory to current file
+set autochdir
+
+" For plugins to load correctly
+filetype plugin indent on
+
+" Set spelling dictionary to US English
+set spell spelllang=en_us
+
+" Set custom spell file
+set spellfile=~/.vim/spell/en.utf-8.add
+
+" Pick leader key
+let mapleader = "'"
+
+" Security
+set modelines=0
+
+" Encoding
+set encoding=utf-8
+
+" Whitespace
+set wrap
+set linebreak
+set nolist
+set textwidth=0
+set wrapmargin=0
+set tabstop=2
+set shiftwidth=2        " Make default indent level 4 spaces
+set softtabstop=2       " Make each tab worth 4 spaces while writing
+set expandtab           " Make each tab worth 4 spaces while reading
+set noshiftround        " Translate tabs into spaces
+
+" Cursor motion
+set scrolloff=3
+set backspace=indent,eol,start
+set matchpairs+=<:>     " use % to jump between pairs
+runtime! macros/matchit.vim
+
+syntax enable			" Enable syntax highlighting
+
+let &t_ut=''            " Fix background color erase
+                        " https://sw.kovidgoyal.net/kitty/faq.html#using-a-color-theme-with-a-background-color-does-not-work-well-in-vim
+
+set number		    	" Turn on line numbers
+set ruler               " Show file stats
+set showmode            " Show the last mode in the bottom bar
+>>>>>>> b54c3c09d2ed08daf8d33620028428e14848956f
 set showcmd			    " Show the last command in the bottom bar
 set wildmenu			" Visual autocomplete
 
@@ -15,12 +104,40 @@ filetype plugin indent on
 
 set lazyredraw			" Only redraw the screen when something changes
 set showmatch			" Highlight opposing matching character {like braces}
+<<<<<<< HEAD
 
 set incsearch			" Search as characters are typed
 set hlsearch			" Highlight search results
 
 " Turn off search highlight with \<space>
 nnoremap <leader><space> :nohlsearch<CR>
+=======
+set incsearch			" Search as characters are typed
+set hlsearch			" Highlight search results
+set ignorecase          " Ignore case on searchs
+set smartcase           " Switch to case sensitive search if uppercase letters are in the search
+map <cr> :let @/=''<cr> " Clear Search
+
+" Remap help key
+inoremap <F1> <ESC>:set invfullscreen<CR>a
+nnoremap <F1> :set invfullscreen<CR>
+vnoremap <F1> :set invfullscreen<CR>
+
+" Formatting
+map <leader> q gqip
+
+" Allow hidden buffers
+set hidden
+
+" Rendering
+set ttyfast
+
+" Status bar
+set laststatus=2
+
+" Turn off search highlight with \<space>
+nnoremap <Return> :nohlsearch<CR>
+>>>>>>> b54c3c09d2ed08daf8d33620028428e14848956f
 
 " Move vertically by visual line, not real line
 nnoremap j gj

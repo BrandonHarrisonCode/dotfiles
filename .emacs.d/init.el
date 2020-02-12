@@ -83,7 +83,7 @@ There are two things you can do about this warning:
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (julia-mode ess yaml-mode web-mode smart-mode-line-powerline-theme python-environment php-mode phi-search paradox auctex ace-window multiple-cursors markdown-mode+ flycheck exec-path-from-shell epc elpy dockerfile-mode docker-tramp direx color-theme-sanityinc-tomorrow avy auto-complete)))
+    (rjsx-mode julia-mode ess yaml-mode web-mode smart-mode-line-powerline-theme python-environment php-mode phi-search paradox auctex ace-window multiple-cursors markdown-mode+ flycheck exec-path-from-shell epc elpy dockerfile-mode docker-tramp direx color-theme-sanityinc-tomorrow avy auto-complete)))
  '(paradox-automatically-star t))
 
 ;; Custom themes
