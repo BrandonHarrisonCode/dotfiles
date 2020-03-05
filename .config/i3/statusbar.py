@@ -1,5 +1,6 @@
 from i3pystatus import Status
 from i3pystatus.weather import wunderground
+from socket import gethostname
 
 status = Status()
 
@@ -10,12 +11,13 @@ status.register("clock",
                 format="%a %b %-d %Y | %X",
                 color="#D4AF37",)
 
-status.register("network",
-                format_up="WiFi: {essid}",
-                interface="wlo1",
-                color_up="#D4AF37",
-                on_leftclick="networkmanager_dmenu",
-                )
+if gethostname() == "polar":
+    status.register("network",
+                    format_up="WiFi: {essid}",
+                    interface="wlo1",
+                    color_up="#D4AF37",
+                    on_leftclick="networkmanager_dmenu",
+                    )
 
 status.register("spotify",
                 format="{artist} - {title}",
@@ -44,15 +46,16 @@ status.register("pulseaudio",
                 color_muted="#705D18",
                 color_unmuted="#D4AF37",)
 
-status.register("battery",
-                format="{status} - {percentage:.2f}% {remaining:%E%hh:%Mm}",
-                alert=True,
-                alert_percentage=5,
-                status={
-                    "DIS":  "Discharging",
-                    "CHR":  "Charging",
-                    "FULL": "Bat full",
-                },
-                color="#D4AF37",)
+if gethostname() == "polar":
+    status.register("battery",
+                    format="{status} - {percentage:.2f}% {remaining:%E%hh:%Mm}",
+                    alert=True,
+                    alert_percentage=5,
+                    status={
+                        "DIS":  "Discharging",
+                        "CHR":  "Charging",
+                        "FULL": "Bat full",
+                    },
+                    color="#D4AF37",)
 
 status.run()
