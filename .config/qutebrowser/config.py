@@ -15,7 +15,6 @@ config.set('content.proxy', 'http://localhost:8118')
 # this, it's possible to set font sizes and the `zoom.default` setting.
 # Type: Bool
 c.qt.highdpi = True
-config.set('fonts.monospace', 'DejaVu')
 
 # Always restore open sites when qutebrowser is reopened.
 # Type: Bool
