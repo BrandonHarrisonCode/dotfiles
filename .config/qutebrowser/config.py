@@ -16,6 +16,9 @@ config.set('content.proxy', 'http://localhost:8118')
 # Type: Bool
 c.qt.highdpi = True
 
+# Turn on autoplay. Allows the broswer to automatically start playing <video> tags in new tabs.
+config.set('content.autoplay', False)
+
 # Always restore open sites when qutebrowser is reopened.
 # Type: Bool
 c.auto_save.session = True
