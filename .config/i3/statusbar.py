@@ -22,6 +22,7 @@ if gethostname() == "polar":
 status.register("spotify",
                 format="{artist} - {title}",
                 color="#fffcf0",
+                on_leftclick="playpause",
                 on_middleclick="previous_song",
                 on_rightclick="next_song",)
 
