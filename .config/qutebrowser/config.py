@@ -19,6 +19,11 @@ c.qt.highdpi = True
 # Turn on autoplay. Allows the broswer to automatically start playing <video> tags in new tabs.
 config.set('content.autoplay', False)
 
+# Integration with lastpass
+config.bind('pq', 'spawn --userscript qute-lastpass')
+config.bind('pe', 'spawn --userscript qute-lastpass --username-only')
+config.bind('pw', 'spawn --userscript qute-lastpass --password-only')
+
 # Always restore open sites when qutebrowser is reopened.
 # Type: Bool
 c.auto_save.session = True
