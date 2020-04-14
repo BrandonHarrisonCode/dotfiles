@@ -40,6 +40,15 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 # Type: Bool
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
+# Allow websites to show notifications
+config.set('content.notifications', True)
+
+# Allows gmail to become the default email handler
+config.set('content.register_protocol_handler', True, 'https://mail.google.com?extsrc=mailto&url=%25s')
+
+# Allows google calendar to become the default calendar handler
+config.set('content.register_protocol_handler', True, 'https://calendar.google.com?cid=%25s')
+
 # Languages to use for spell checking. You can check for available
 # languages and install dictionaries using scripts/dictcli.py. Run the
 # script with -h/--help for instructions.

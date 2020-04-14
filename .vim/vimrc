@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-colorscheme badwolf		" Colorful color scheme
-syntax enable			" Enable syntax highlighting
-
-set shiftwidth=4        " Make default indent level 4 spaces
-set tabstop=4			" Make each tab worth 4 spaces while reading
-set softtabstop=4		" Make each tab worth 4 spaces while writing
-set expandtab			" Translate tabs into spaces
-
-set number		    	" Turn on line numbers
-=======
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
@@ -60,6 +49,9 @@ set spell spelllang=en_us
 " Set custom spell file
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" Disable spell by default
+set nospell
+
 " Pick leader key
 let mapleader = "'"
 
@@ -95,7 +87,6 @@ let &t_ut=''            " Fix background color erase
 set number		    	" Turn on line numbers
 set ruler               " Show file stats
 set showmode            " Show the last mode in the bottom bar
->>>>>>> b54c3c09d2ed08daf8d33620028428e14848956f
 set showcmd			    " Show the last command in the bottom bar
 set wildmenu			" Visual autocomplete
 
@@ -104,14 +95,6 @@ filetype plugin indent on
 
 set lazyredraw			" Only redraw the screen when something changes
 set showmatch			" Highlight opposing matching character {like braces}
-<<<<<<< HEAD
-
-set incsearch			" Search as characters are typed
-set hlsearch			" Highlight search results
-
-" Turn off search highlight with \<space>
-nnoremap <leader><space> :nohlsearch<CR>
-=======
 set incsearch			" Search as characters are typed
 set hlsearch			" Highlight search results
 set ignorecase          " Ignore case on searchs
@@ -137,7 +120,6 @@ set laststatus=2
 
 " Turn off search highlight with \<space>
 nnoremap <Return> :nohlsearch<CR>
->>>>>>> b54c3c09d2ed08daf8d33620028428e14848956f
 
 " Move vertically by visual line, not real line
 nnoremap j gj

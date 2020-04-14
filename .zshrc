@@ -55,3 +55,13 @@ alias weather='curl wttr.in/80528'
 # Load plugins from ~/.zsh_plugins.txt
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+export PATH=$PATH:~/.local/bin
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export TERM=xterm-256color
