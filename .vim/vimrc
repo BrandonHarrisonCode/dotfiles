@@ -3,8 +3,10 @@ call plug#begin('~/.vim/plugged')
 
 " Muted colorscheme
 Plug 'jacoborus/tender.vim' 
-" Powerline status bar
-Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim/' }
+" Pretty status bar
+Plug 'vim-airline/vim-airline'
+" Themes for status bar
+Plug 'vim-airline/vim-airline-themes'
 " Syntax highlighting for Javascript
 Plug 'pangloss/vim-javascript'
 " Syntax highlighting for React
@@ -15,15 +17,25 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'hashivim/vim-terraform'
 " Large selection of colorschemse
 Plug 'flazz/vim-colorschemes'
+" Comment and uncomment lines easily
+Plug 'preservim/nerdcommenter'
+" Easy note taking
+Plug 'xolox/vim-notes'
+" Helper plugin for vim-notes
+Plug 'xolox/vim-misc'
+" Easier searching and replaceing
+Plug 'tpope/vim-abolish'
 
 " Initialize plugin system
 call plug#end()
 
 " Color scheme
 set t_Co=256
-set background=dark
+colorscheme fahrenheit " neodark looks good too
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
 
 " Don't try to be vi compatible
 set nocompatible
@@ -49,8 +61,14 @@ set spell spelllang=en_us
 " Set custom spell file
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" Turn off spell mode by default
+set nospell
+
 " Pick leader key
 let mapleader = "'"
+
+" Settings for NerdCommenter
+let g:NERDSpaceDelims = 1 " Include one space after comment delimiters
 
 " Security
 set modelines=0

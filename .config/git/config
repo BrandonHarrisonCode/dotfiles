@@ -3,7 +3,7 @@
 	email = brandonharrisoncode@gmail.com
 [core]
 	autocrlf = input
-	editor = emacs
+	editor = vim
 	excludesfile = ~/.config/ignore_global
 [push]
 	default = simple

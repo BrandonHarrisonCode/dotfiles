@@ -52,6 +52,33 @@ alias please='echo -e "Fine."; eval "sudo $(fc -ln -1)"'
 # Access cli weather
 alias weather='curl wttr.in/80528'
 
+
+function proxy() {
+  PROXY='http://proxy.houston.hpecorp.net:8080'
+  export http_proxy=$PROXY
+  export HTTP_PROXY=$PROXY
+  export https_proxy=$PROXY
+  export HTTPS_PROXY=$PROXY
+  export ftp_proxy=$PROXY
+  export FTP_PROXY=$PROXY
+  export no_proxy='localhost,127.0.0.1,/var/run/docker.sock'
+  export NO_PROXY='localhost,127.0.0.1,/var/run/docker.sock'
+}
+
+function noproxy() {
+  unset http_proxy
+  unset HTTP_PROXY
+  unset https_proxy
+  unset HTTPS_PROXY
+  unset ftp_proxy
+  unset FTP_PROXY
+}
+
+proxy
+
 # Load plugins from ~/.zsh_plugins.txt
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
