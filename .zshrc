@@ -74,8 +74,6 @@ function noproxy() {
   unset FTP_PROXY
 }
 
-proxy
-
 # Load plugins from ~/.zsh_plugins.txt
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
