@@ -81,4 +81,16 @@ source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
+if [ -f /usr/local/bin/vault ]; then
+  complete -o nospace -C /usr/local/bin/vault vault
+fi
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+export PATH=$PATH:~/.local/bin
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export TERM=xterm-256color
