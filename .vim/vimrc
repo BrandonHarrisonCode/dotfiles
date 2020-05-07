@@ -25,6 +25,8 @@ Plug 'xolox/vim-notes'
 Plug 'xolox/vim-misc'
 " Easier searching and replaceing
 Plug 'tpope/vim-abolish'
+" Opens a web-browser to show live Markdown editing
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " Initialize plugin system
 call plug#end()

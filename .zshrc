@@ -88,6 +88,7 @@ fi
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 export PATH=$PATH:~/.local/bin
+PATH="$PATH:$(yarn global bin)"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
