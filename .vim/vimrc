@@ -27,6 +27,8 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-abolish'
 " Opens a web-browser to show live Markdown editing
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Fuzzy file finder
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -51,11 +53,20 @@ set path+=**
 " Allows seeing all search results at once
 set wildmenu
 
+" Ignores certain files during searches
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/venv/*,*/__pycache__/*,*.pyc
+
 " Automatically set current directory to current file
 set autochdir
 
 " For plugins to load correctly
 filetype plugin indent on
+
+" Consider Vagrantfiles as ruby files for syntax highlighting
+augroup vagrant
+  au!
+  au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
 
 " Set spelling dictionary to US English
 set spell spelllang=en_us
@@ -135,6 +146,11 @@ set ttyfast
 " Status bar
 set laststatus=2
 
+" Save persistant undo history
+" WARNING: Make sure to make the file first! Vim won't autocreate it
+set undofile
+set undodir=~/.vim/undo/
+
 " Turn off search highlight with \<space>
 nnoremap <Return> :nohlsearch<CR>
 
@@ -142,4 +158,11 @@ nnoremap <Return> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
-inoremap jk <esc> 		" Remap jk to return to normal mode
+" Simplify window movement commands
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Remap jk to return to normal mode
+inoremap jk <esc> 		
