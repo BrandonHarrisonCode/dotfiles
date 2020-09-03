@@ -50,7 +50,10 @@ export BROWSER=qutebrowser
 alias please='echo -e "Fine."; eval "sudo $(fc -ln -1)"'
 
 # Access cli weather
-alias weather='curl wttr.in/80528'
+alias weather='curl wttr.in/80202'
+
+# Update homebrew
+alias brewdate='brew update && brew upgrade && brew cask upgrade'
 
 
 function proxy() {
@@ -88,6 +91,8 @@ fi
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
 export PATH=$PATH:~/.local/bin
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH=$PATH:~/.gem/ruby/2.7.0/bin
 PATH="$PATH:$(yarn global bin)"
 
 export LC_ALL=en_US.UTF-8
