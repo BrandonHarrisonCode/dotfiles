@@ -27,6 +27,8 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-abolish'
 " Opens a web-browser to show live Markdown editing
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plugin to help with editing LaTeX
+Plug 'lervag/vimtex'
 
 " Initialize plugin system
 call plug#end()
@@ -71,6 +73,9 @@ let mapleader = "'"
 
 " Settings for NerdCommenter
 let g:NERDSpaceDelims = 1 " Include one space after comment delimiters
+
+" Make MuPDF default LaTeX viewer
+let g:vimtex_view_method = 'mupdf'
 
 " Security
 set modelines=0
