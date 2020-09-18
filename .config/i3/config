@@ -26,6 +26,9 @@ client.focused #4c7899 #000000 #ffffff #aa8f00   #aa8f00
 # Start Compton for shadows
 exec compton -b -c
 
+# Start sleep timer
+exec xidlehook --not-when-audio --not-when-fullscreen --timer 600 "systemctl suspend-then-hibernate" "" &
+
 # Reboot desktop wallpaper
 exec feh --bg-scale --no-xinerama ~/Pictures/desktop
 
