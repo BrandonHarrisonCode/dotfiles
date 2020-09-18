@@ -77,6 +77,14 @@ function noproxy() {
   unset FTP_PROXY
 }
 
+function finishbranch() {
+  current_branch="$(git branch --show-current)"
+  git push origin "${current_branch}" && \
+  git checkout master && \
+  git pull origin "${current_branch}" && \
+  git push origin master
+}
+
 # Load plugins from ~/.zsh_plugins.txt
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
