@@ -53,7 +53,7 @@ alias please='echo -e "Fine."; eval "sudo $(fc -ln -1)"'
 alias weather='curl wttr.in/80202'
 
 # Update homebrew
-alias brewdate='brew update && brew upgrade && brew cask upgrade'
+alias brewdate='brew update && brew upgrade && brew upgrade --cask'
 
 
 function proxy() {
