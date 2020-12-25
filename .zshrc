@@ -53,7 +53,7 @@ alias please='echo -e "Fine."; eval "sudo $(fc -ln -1)"'
 alias weather='curl wttr.in/80202'
 
 # Update homebrew
-alias brewdate='brew update && brew upgrade && brew cask upgrade'
+alias brewdate='brew update && brew upgrade && brew upgrade --cask'
 
 
 function proxy() {
@@ -75,6 +75,14 @@ function noproxy() {
   unset HTTPS_PROXY
   unset ftp_proxy
   unset FTP_PROXY
+}
+
+function finishbranch() {
+  current_branch="$(git branch --show-current)"
+  git push origin "${current_branch}" && \
+  git checkout master && \
+  git pull origin "${current_branch}" && \
+  git push origin master
 }
 
 # Load plugins from ~/.zsh_plugins.txt
