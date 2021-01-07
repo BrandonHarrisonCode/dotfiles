@@ -171,3 +171,9 @@ nnoremap <C-H> <C-W><C-H>
 
 " Remap jk to return to normal mode
 inoremap jk <esc> 		
+
+" Automatically remove trailing whitespace on lines
+autocmd BufWritePre *.rb :%s/\s\+$//e 
+
+" Make trailing whitespace visible
+set listchars=trail:-
