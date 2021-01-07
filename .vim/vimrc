@@ -52,7 +52,8 @@ filetype off
 " Allows recursive search
 set path+=**
 
-" Allows seeing all search results at once
+" Allows seeing all search results at once, and autocompletes like bash
+set wildmode=longest,list,full
 set wildmenu
 
 " Ignores certain files during searches
@@ -121,7 +122,6 @@ set number		    	" Turn on line numbers
 set ruler               " Show file stats
 set showmode            " Show the last mode in the bottom bar
 set showcmd			    " Show the last command in the bottom bar
-set wildmenu			" Visual autocomplete
 
 " Change indentation based on the filetype
 filetype plugin indent on		
