@@ -105,7 +105,7 @@ set tabstop=2
 set shiftwidth=2        " Make default indent level 4 spaces
 set softtabstop=2       " Make each tab worth 4 spaces while writing
 set expandtab           " Make each tab worth 4 spaces while reading
-set noshiftround        " Translate tabs into spaces
+set shiftround        " Translate tabs into spaces
 
 " Cursor motion
 set scrolloff=3
